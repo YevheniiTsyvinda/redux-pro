@@ -1,21 +1,17 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
 import './App.css';
-import { useAppDispatch, useAppSelector } from './hooks/redux';
-import { userSlice } from './store/reducers/UserSlice';
-import { RootState } from './store/store';
+import PostContainer from './components/PostContainer';
 
 function App() {
-    const {count} = useAppSelector(state => state.userReducer);
-    const {increment} = userSlice.actions;
-    const dispatch = useAppDispatch()
+    // const dispatch = useAppDispatch();
+    // const {users,isLoading,error} = useAppSelector(state => state.userReducer)
 
-    console.log(increment(5))
+    // useEffect(()=>{
+    //     dispatch(fetchUsers())
+    // },[])
 
   return (
     <div className="App">
-     app
+        <PostContainer/>
     </div>
   );
 }
